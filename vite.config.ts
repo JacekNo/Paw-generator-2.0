@@ -4,6 +4,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/Paw-generator-2.0/',
   plugins: [vue()],
   resolve: {
     alias: {
