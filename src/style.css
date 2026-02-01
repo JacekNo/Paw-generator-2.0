@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --color-teb-blue: #0F4496;
+  --color-teb-dark: #0a3270;
+  --color-teb-accent: #3A8DDE;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Import fontu UI */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* --- TYPOGRAFIA GENERATORA (Roc Grotesk) --- */
+@font-face {
+  font-family: 'Roc Grotesk';
+  src: url('/fonts/RocGrotesk-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Roc Grotesk';
+  src: url('/fonts/RocGrotesk-WideBold.woff') format('woff');
+  font-weight: 800; /* ExtraBold dla Wide */
+  font-style: normal;
+  font-display: block;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F8FAFC;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
