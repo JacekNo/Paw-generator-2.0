@@ -27,7 +27,7 @@ export const SZKOLENIA_CONFIG: FormatConfig[] = [
         w: 768, h: 960,
         hasText: true,
         photoHeight: 480,
-        overlay: '/overlays/Szkolenia_768x960.png', // Upewnij się co do ścieżki!
+        overlay: 'assets/overlays/Szkolenia_768x960.png', // Upewnij się co do ścieżki!
         fontSize: 36, lineHeight: 1.2, maxLines: 3, 
         textX: 25, textY: 530, maxWidth: 668,
         textColor: '#1D1D1B'
@@ -38,7 +38,7 @@ export const SZKOLENIA_CONFIG: FormatConfig[] = [
         w: 1080, h: 1080,
         hasText: true,
         photoHeight: 629,
-        overlay: '/overlays/Szkolenia_1080x1080.png',
+        overlay: 'assets/overlays/Szkolenia_1080x1080.png',
         fontSize: 48, lineHeight: 1.2, maxLines: 3, 
         textX: 35, textY: 670, maxWidth: 960,
         textColor: '#1D1D1B'
@@ -49,7 +49,7 @@ export const SZKOLENIA_CONFIG: FormatConfig[] = [
         w: 1080, h: 1920,
         hasText: true,
         photoHeight: 917,
-        overlay: '/overlays/Szkolenia_1080x1920.png',
+        overlay: 'assets/overlays/Szkolenia_1080x1920.png',
         fontSize: 48, lineHeight: 1.2, maxLines: 3, 
         textX: 35, textY: 975, maxWidth: 920,
         textColor: '#1D1D1B'
@@ -60,7 +60,7 @@ export const SZKOLENIA_CONFIG: FormatConfig[] = [
         w: 1080, h: 720,
         hasText: false,
         photoHeight: 720,
-        overlay: '/overlays/NST_1080x720.png',
+        overlay: 'assets/overlays/NST_1080x720.png',
         textColor: '#1D1D1B'
     },
     {
@@ -69,7 +69,7 @@ export const SZKOLENIA_CONFIG: FormatConfig[] = [
         w: 1200, h: 628,
         hasText: false,
         photoHeight: 628,
-        overlay: '/overlays/Szkolenia_1200x628.png',
+        overlay: 'assets/overlays/Szkolenia_1200x628.png',
         textColor: '#1D1D1B'
     }
 ];

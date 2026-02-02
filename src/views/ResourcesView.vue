@@ -49,9 +49,11 @@ const copyToClipboard = (hex: string) => {
   setTimeout(() => copiedHex.value = null, 2000);
 };
 
-// Generowanie ścieżek do plików SVG (z podkreślnikami)
+// Generowanie ścieżek do plików SVG
 const getLogoPath = (slug: string, type: 'poziom' | 'pion', variant: 'kolor' | 'bialy') => {
-    return `/assets/brands/${slug}_${type}_${variant}.svg`;
+    // ZMIANA: Usuwamy slash na początku i dodajemy BASE_URL
+    const path = `assets/brands/${slug}_${type}_${variant}.svg`;
+    return `${import.meta.env.BASE_URL}${path}`;
 };
 
 const openBrandModal = (brand: BrandColor) => {

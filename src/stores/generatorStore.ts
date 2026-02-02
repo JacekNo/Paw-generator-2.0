@@ -183,10 +183,18 @@ export const useGeneratorStore = defineStore('generator', {
             const promises = SZKOLENIA_CONFIG.map(cfg => {
                 return new Promise<void>((resolve) => {
                     if (!cfg.overlay) return resolve();
+                    
                     const img = new Image();
-                    img.src = cfg.overlay;
+                    // ZMIANA: Dodajemy import.meta.env.BASE_URL przed ścieżką
+                    // Usuwamy też ewentualny slash na początku cfg.overlay, żeby nie dublować
+                    const cleanPath = cfg.overlay.startsWith('/') ? cfg.overlay.slice(1) : cfg.overlay;
+                    img.src = `${import.meta.env.BASE_URL}${cleanPath}`;
+                    
                     img.onload = () => { this.overlays[cfg.id] = img; resolve(); };
-                    img.onerror = () => { resolve(); };
+                    img.onerror = () => { 
+                        console.error(`Błąd ładowania tła: ${img.src}`);
+                        resolve(); 
+                    };
                 });
             });
             return Promise.all(promises);

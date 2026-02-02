@@ -6,7 +6,7 @@ import {
 } from 'lucide-vue-next';
 import { useGeneratorStore } from '@/stores/generatorStore';
 import ImageGalleryModal from '@/components/ImageGalleryModal.vue';
-  import AnimatedToolIcon from '@/components/common/AnimatedToolIcon.vue'; // Import animacji
+import AnimatedToolIcon from '@/components/common/AnimatedToolIcon.vue'; // Import animacji
 
 const generator = useGeneratorStore();
 const canvasContainer = ref<HTMLElement | null>(null);
