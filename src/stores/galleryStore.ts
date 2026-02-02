@@ -21,7 +21,7 @@ export const useGalleryStore = defineStore('gallery', {
     categories: galleryData as GalleryCategory[],
     selectedCategoryId: 'all', // 'all' lub ID kategorii
     searchQuery: '',
-    basePath: '/library/' // Ścieżka do folderu w /public
+    basePath: 'assets/library/' // Ścieżka do folderu w /public
   }),
 
   getters: {
@@ -74,8 +74,12 @@ export const useGalleryStore = defineStore('gallery', {
     },
 
     getImageUrl(filename: string) {
-        // Obsługa spacji i znaków specjalnych w URL
-        return `${this.basePath}${filename}`;
+        // 1. Budujemy ścieżkę względną (assets/library/Kategoria/plik.png)
+        const path = `${this.basePath}${filename}`;
+        
+        // 2. Zwracamy path doklejony do BASE_URL
+        // (To naprawia błąd "unused variable" oraz błąd 404 na GitHubie)
+        return `${import.meta.env.BASE_URL}${path}`;
     }
   }
 });
